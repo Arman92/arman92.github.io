@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import { Container } from './styled';
-import logo from '@pinwork/assets/images/loading.png';
-import { DotSpinner } from '../DotSpinner';
-import { Button } from '../Button';
+import { Container } from "./styled";
+import { DotSpinner } from "../DotSpinner";
+import { Button } from "../Button";
 
 type Props = {
   isLoading: boolean;
@@ -20,16 +19,16 @@ export const LoadingAnimation: FC<Props> = (props: Props) => {
     <Container>
       {isLoading ? (
         <>
-          <img src={logo} />
-          <DotSpinner className="spinner" color="#47bdd4" size="12px" />{' '}
+          {/* <img src={logo} /> */}
+          <DotSpinner className="spinner" color="#47bdd4" size="12px" />{" "}
         </>
       ) : null}
 
       {error || timedOut ? (
         <div className="error-container">
-          <label>متاسفانه مشکلی در بارگذاری این صفحه رخ داده. لطفا دوباره سعی کنید:</label>
+          <label>Sorry, something went wrong, please try again.</label>
           <Button onClick={retry} className="btn btn-large btn-blue btn-fill">
-            سعی دوباره
+            Try Again
           </Button>
         </div>
       ) : null}

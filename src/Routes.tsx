@@ -12,7 +12,12 @@ const loadingComponent = (props: LoadingComponentProps) => (
 );
 
 const HomePage = Loadable({
-  loader: () => importer(import("./pages/Home")),
+  loader: () => importer(import("./pages/HomePage")),
+  loading: loadingComponent
+});
+
+const ResumePage = Loadable({
+  loader: () => importer(import("./pages/ResumePage")),
   loading: loadingComponent
 });
 
@@ -20,6 +25,7 @@ export const AppRoutes = () => {
   return (
     <Switch>
       <Route path="/" exact={true} component={HomePage} />
+      <Route path="/resume" exact={true} component={ResumePage} />
     </Switch>
   );
 };
