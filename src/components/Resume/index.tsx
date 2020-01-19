@@ -1,30 +1,35 @@
-import React from "react";
-import { Document, Page, Text, View, StyleSheet } from "@react-pdf/renderer";
-import { Heading } from "./styled";
+import React from 'react';
+import { Document, Font, Text } from '@react-pdf/renderer';
 
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: "row",
-    backgroundColor: "#E4E4E4",
-    width: "100%"
-  },
-  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1
-  }
+import { SideBar } from './components/SideBar';
+import { Body, MainContent, Section, SectionTitleContainer, SectionTitle } from './styled';
+
+// Register font
+Font.register({
+  family: 'Century Gothic',
+  src: 'https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf',
+  fonts: [
+    { src: 'https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf' },
+    {
+      src: 'https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf',
+      fontWeight: 'bold'
+    },
+    { src: 'https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf', fontStyle: 'italic' }
+  ]
 });
 
 const ResumeComponent = () => (
   <Document>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Heading>Section #1</Heading>
-      </View>
-      <View style={styles.section}>
-        <Text>Section #2</Text>
-      </View>
-    </Page>
+    <Body size="A4">
+      <SideBar />
+      <MainContent>
+        <Section>
+          <SectionTitleContainer>
+            <SectionTitle>Work History</SectionTitle>
+          </SectionTitleContainer>
+        </Section>
+      </MainContent>
+    </Body>
   </Document>
 );
 

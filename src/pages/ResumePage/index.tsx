@@ -1,11 +1,11 @@
-import React from "react";
-import { PDFViewer } from "@react-pdf/renderer";
+import React from 'react';
+import { PDFViewer } from '@react-pdf/renderer';
 
-import Resume from "../../components/Resume";
+import Resume from '../../components/Resume';
 
 const ResumePage = () => {
   return (
-    <PDFViewer width="100%" height="100%">
+    <PDFViewer style={{ width: '100%', height: '100vh' }}>
       <Resume />
     </PDFViewer>
   );
