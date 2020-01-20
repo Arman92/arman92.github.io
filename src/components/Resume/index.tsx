@@ -1,5 +1,5 @@
 import React from 'react';
-import { Document, Font, Text, View, Link } from '@react-pdf/renderer';
+import { Document, Font, Text, Link } from '@react-pdf/renderer';
 
 import { SideBar } from './components/SideBar';
 import {
@@ -15,20 +15,37 @@ import {
   JobDuration,
   JobAcheivments,
   Acheivment,
-  Bubble
+  Bubble,
+  AboutMeText,
+  EducationTitle,
+  EducationPlace,
+  EducationYear
 } from './styled';
 
 // Register font
 Font.register({
   family: 'Century Gothic',
-  src: 'https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf',
   fonts: [
     { src: 'https://builder.zety.com/blobcontent/zty/fonts/CenturyGothic.ttf' },
     {
       src: 'https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicBold.ttf',
-      fontWeight: 'bold'
+      fontWeight: 700
     },
     { src: 'https://builder.zety.com/blobcontent/zty/fonts/CenturyGothicItalic.ttf', fontStyle: 'italic' }
+  ]
+});
+
+// Register font
+Font.register({
+  family: 'Segoe UI',
+
+  fonts: [
+    { src: 'http://c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf', fontWeight: 300 },
+    {
+      src: 'http://c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf',
+      fontWeight: 'normal'
+    },
+    { src: 'http://c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf', fontWeight: 700 }
   ]
 });
 
@@ -41,11 +58,11 @@ const ResumeComponent = () => (
           <SectionTitleContainer>
             <SectionTitle>About Me</SectionTitle>
           </SectionTitleContainer>
-          <Text style={{ padding: '12px', paddingTop: 0, textAlign: 'justify', lineHeight: '30px' }}>
+          <AboutMeText style={{ padding: '12px', paddingTop: 0, textAlign: 'justify', lineHeight: '30px' }}>
             Enthusiastic Full-Stack engineer eager to contribute to team success through hard work, attention to detail
             and excellent organizational skills. Excellent reputation for resolving problems, flexibility and
             diligently. Motivated to learn, grow and excel in variant technologies.
-          </Text>
+          </AboutMeText>
         </Section>
 
         <Section>
@@ -123,11 +140,11 @@ const ResumeComponent = () => (
               </Acheivment>
               <Acheivment>
                 <Bubble></Bubble>
-                <Text>Backend: Golang, PostgreSQL, PostGIS, Microservices</Text>
+                <Text>Backend: Golang, Gorm ORM, PostgreSQL, PostGIS, Microservices</Text>
               </Acheivment>
               <Acheivment>
                 <Bubble></Bubble>
-                <Text>Frontend: Angular 6, Material Design, Leaflet maps</Text>
+                <Text>Frontend: Angular 6, Material Design, Leaflet maps, WebSockets</Text>
               </Acheivment>
               <Acheivment>
                 <Bubble></Bubble>
@@ -160,7 +177,9 @@ const ResumeComponent = () => (
               </Acheivment>
               <Acheivment>
                 <Bubble></Bubble>
-                <Text>Techs used: Java, Golang, Android SDK, PostgreSQL, PostGIS</Text>
+                <Text>
+                  Techs used: Java, Golang, Android SDK, React Native, SQLite, ORMs, PostgreSQL, PostGIS, C, C++
+                </Text>
               </Acheivment>
             </JobAcheivments>
           </WorkHeader>
@@ -186,6 +205,68 @@ const ResumeComponent = () => (
                 <Text>Techs used: ASP.net MVC, Entity Framework, SQL Server, HighCharts</Text>
               </Acheivment>
             </JobAcheivments>
+          </WorkHeader>
+        </Section>
+
+        <Section>
+          <SectionTitleContainer>
+            <SectionTitle>Products and Projects</SectionTitle>
+          </SectionTitleContainer>
+
+          <WorkHeader>
+            <JobTitle>Hamsohbat Telegram Bot</JobTitle>
+            <FlexRowView>
+              <JobLocation>Telegram Dating Chatbot with over 300,000 total users and over 10,000 MAU.</JobLocation>
+            </FlexRowView>
+
+            <JobAcheivments>
+              <Acheivment>
+                <Bubble></Bubble>
+                <Text>Techs used: Golang, PostgreSQL, PostGIS, Docker</Text>
+              </Acheivment>
+            </JobAcheivments>
+            <JobAcheivments>
+              <Acheivment>
+                <Bubble></Bubble>
+                <Text>First of the kind in Iran, inspired a dozen of similar chat bots.</Text>
+              </Acheivment>
+            </JobAcheivments>
+          </WorkHeader>
+
+          <WorkHeader>
+            <JobTitle>Golang Telegram TdLib</JobTitle>
+            <FlexRowView>
+              <JobLocation>
+                Golang bindings for Telegram Tdlib, enables you to create a new Telegram client with Go.
+              </JobLocation>
+            </FlexRowView>
+
+            <JobAcheivments>
+              <Acheivment>
+                <Bubble></Bubble>
+                <Text>Techs used: Golang, PostgreSQL, PostGIS, Docker</Text>
+              </Acheivment>
+            </JobAcheivments>
+            <JobAcheivments>
+              <Acheivment>
+                <Bubble></Bubble>
+                <Text>First of the kind in Iran, inspired a dozen of similar chat bots.</Text>
+              </Acheivment>
+            </JobAcheivments>
+          </WorkHeader>
+        </Section>
+
+        <Section>
+          <SectionTitleContainer>
+            <SectionTitle>Academic Background</SectionTitle>
+          </SectionTitleContainer>
+          <WorkHeader>
+            <FlexRowView>
+              <EducationTitle>Bachelor's degree on Software Engineering</EducationTitle>
+              <EducationYear>2011 - 2016</EducationYear>
+            </FlexRowView>
+
+            <EducationPlace>Isfahan University of Technology (IUT) - Isfahan, Iran</EducationPlace>
           </WorkHeader>
         </Section>
       </MainContent>

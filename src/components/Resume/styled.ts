@@ -25,7 +25,9 @@ export const SectionTitleContainer = styled.View`
 
 export const SectionTitle = styled.Text`
   color: #003d73;
-  font-size: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Segoe UI';
 `;
 
 export const WorkHeader = styled.View`
@@ -39,6 +41,7 @@ export const JobTitle = styled.Text`
 `;
 
 export const FlexRowView = styled.View`
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
 `;
@@ -69,4 +72,30 @@ export const Bubble = styled.View`
   border-radius: 3px;
   background-color: gray;
   margin-right: 5px;
+`;
+
+export const AboutMeText = styled.Text`
+  text-align: 'justify';
+  line-height: '30px';
+  font-size: 10px;
+  font-family: 'Segoe UI';
+`;
+
+export const EducationTitle = styled.Text`
+  font-size: 12px;
+  font-family: 'Segoe UI';
+`;
+
+export const EducationPlace = styled.Text`
+  color: #000000;
+  font-size: 10px;
+  font-family: 'Segoe UI';
+  font-weight: light;
+`;
+
+export const EducationYear = styled.Text`
+  color: #909090;
+  font-size: 9px;
+  font-family: 'Segoe UI';
+  font-weight: light;
 `;

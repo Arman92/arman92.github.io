@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Image } from '@react-pdf/renderer';
+import { Text } from '@react-pdf/renderer';
 // import homeIcon from './home2.png';
 
 import {
@@ -67,6 +67,14 @@ export const SideBar = () => {
             <Bar style={{ width: '80%' }} />
           </BarContainer>
           <ExcellencyLabel>Good</ExcellencyLabel>
+        </SkillContainer>
+
+        <SkillContainer>
+          <SkillLabel>HTML/CSS</SkillLabel>
+          <BarContainer>
+            <Bar style={{ width: '100%' }} />
+          </BarContainer>
+          <ExcellencyLabel>Excellent</ExcellencyLabel>
         </SkillContainer>
 
         <SkillContainer>
