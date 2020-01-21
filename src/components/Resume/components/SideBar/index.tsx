@@ -70,7 +70,7 @@ export const SideBar = () => {
         </SkillContainer>
 
         <SkillContainer>
-          <SkillLabel>HTML/CSS</SkillLabel>
+          <SkillLabel>HTML/CSS/SASS</SkillLabel>
           <BarContainer>
             <Bar style={{ width: '100%' }} />
           </BarContainer>
