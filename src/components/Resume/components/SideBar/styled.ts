@@ -16,7 +16,7 @@ export const NameLabel = styled.Text`
 
 export const TitleLabel = styled.Text`
   font-size: 14px;
-  padding-top: 3px;
+  padding-top: 14px;
 `;
 
 export const Section = styled.View``;
@@ -51,6 +51,7 @@ export const ExcellencyLabel = styled.Text`
 export const SkillContainer = styled.View`
   width: 100%;
   padding-right: 12px;
+  margin-top: 3px;
 `;
 
 export const BarContainer = styled.View`

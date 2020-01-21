@@ -15,12 +15,16 @@ export const MainContent = styled.View`
   padding: 16px 0;
 `;
 
-export const Section = styled.View``;
+export const Section = styled.View`
+  margin-top: 1px;
+`;
 
 export const SectionTitleContainer = styled.View`
   border: 1px solid #d5d6d6;
   padding: 3px 12px;
   margin-bottom: 8px;
+  border-left-width: 0;
+  border-right-width: 0;
 `;
 
 export const SectionTitle = styled.Text`
@@ -32,7 +36,7 @@ export const SectionTitle = styled.Text`
 
 export const WorkHeader = styled.View`
   padding: 0 12px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 `;
 
 export const JobTitle = styled.Text`
@@ -56,11 +60,11 @@ export const JobDuration = styled.Text`
   color: #909090;
 `;
 
-export const JobAcheivments = styled.View`
+export const JobAchievements = styled.View`
   margin-top: 1px;
 `;
 
-export const Acheivment = styled.View`
+export const Achievement = styled.View`
   font-size: 9px;
   flex-direction: row;
   align-items: center;
@@ -91,6 +95,7 @@ export const EducationPlace = styled.Text`
   font-size: 10px;
   font-family: 'Segoe UI';
   font-weight: light;
+  margin-bottom: 5px;
 `;
 
 export const EducationYear = styled.Text`
@@ -98,4 +103,9 @@ export const EducationYear = styled.Text`
   font-size: 9px;
   font-family: 'Segoe UI';
   font-weight: light;
+`;
+
+export const Dissertation = styled.Text`
+  color: #363636;
+  font-size: 9px;
 `;

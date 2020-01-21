@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '@react-pdf/renderer';
+import { Text, Link } from '@react-pdf/renderer';
 // import homeIcon from './home2.png';
 
 import {
@@ -115,7 +115,25 @@ export const SideBar = () => {
         <Text>+98 936 4650095</Text>
 
         <TextBold style={{ marginTop: '6px' }}>Email</TextBold>
-        <Text>Arman1371@gmail.com</Text>
+        <Text>
+          <Link style={{ textDecoration: 'none' }} src="mailto:Arman1371@gmail.com">
+            Arman1371@gmail.com
+          </Link>
+        </Text>
+
+        <TextBold style={{ marginTop: '6px' }}>Github</TextBold>
+        <Text>
+          <Link style={{ textDecoration: 'none' }} src="https://github.com/Arman92">
+            github.com/arman92
+          </Link>
+        </Text>
+
+        <TextBold style={{ marginTop: '6px' }}>LinkedIn</TextBold>
+        <Text>
+          <Link style={{ textDecoration: 'none' }} src="https://www.linkedin.com/in/arman-safikhani/">
+            arman-safikhani
+          </Link>
+        </Text>
       </Section>
     </LeftSideBar>
   );
